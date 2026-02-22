@@ -40,9 +40,8 @@ ENV PATH="/app/.venv/bin:$PATH"
 # Reset the entrypoint, don't invoke `uv`
 ENTRYPOINT []
 
-RUN echo "00 7,16 * * * /bin/bash /app/src/run_script.sh > /proc/1/fd/1 2>&1" > /etc/cron.d/mycron \
+RUN echo "00 7,16 * * * root /bin/bash /app/src/run_script.sh > /proc/1/fd/1 2>&1" > /etc/cron.d/mycron \
     && chmod 0644 /etc/cron.d/mycron \
-    && crontab /etc/cron.d/mycron \
     && touch /var/log/cron.log
 
 CMD ["cron", "-f"]
