@@ -7,7 +7,7 @@ dependencies = [
     "resend==2.24.0",
     "beautifulsoup4==4.14.3",
     "requests==2.32.5",
-    "mistralai==2.0.2",
+    "mistralai==2.0.4",
     "lxml-html-clean==0.4.4",
 ]
 
