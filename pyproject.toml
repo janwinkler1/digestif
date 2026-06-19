@@ -13,7 +13,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "ruff==0.15.17",
+    "ruff==0.15.18",
     "ty==0.0.50",
     "pytest==9.1.0",
     "mdformat==1.0.0",
